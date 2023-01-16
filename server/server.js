@@ -35,6 +35,7 @@ app.use(express.json({ limit: "30mb" }));
 app.use(
   cors({
     origin: [
+      "https://blen-dqwl.onrender.com",
       "https://blen.netlify.app",
       "http://localhost:3000",
       "https://api.cloudinary.com/dnsbeaa7f/image/upload",
