@@ -39,7 +39,7 @@ function login(creds) {
 export const updateProfileInfo = async (profileEdit, userID) => {
   try {
     const token = tokenService.getToken();
-    let res = await fetch(`/api/users/${userID}`, {
+    let res = await fetch(`${BASE_URL}/api/users/${userID}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
