@@ -145,7 +145,7 @@ Before actually coding, I spent some time researching the best way to upload and
 To upload images, I used multer. I spent a lot of time reading the documentation and blogs. I also watched videos on YouTube. These helped me understand what was happening behind the scenes. When I was finally able to upload and store the images in the filesystem, I noticed the images were not being displayed. I looked up solutions online and asked my partners, but I could not find the answer to resolve that issue. I then decided to ask my mentor. He then explained to me that I had not told Express how to serve the static files. 
 
 ```
-app.use("/uploads", express.static("uploads"));
+app.use(express.static(__dirname));
 ```
 
 ### Styling
@@ -161,6 +161,9 @@ Uploading images was definitely one of the biggest challenges I had during this 
 ### Teamwork
 Working in a team turned out to be a lot more challenging than I thought it would be. A lot of times, we had to stop what we were doing and fix bugs that appeared because of the last merge. We lost a lot of precious time because of that. 
 
+### Deployment 
+Deploying our app turned out to be more complicated than we thought it would be. We had a lot of issues with the upload image functionality. We deployed our app on Render thinking that it could store our images. However, that was not the case. In the end, we decided to use Cloudinary to store our images. 
+
 ## Wins
 
 ### Using a Text Editor
@@ -171,6 +174,9 @@ The feature to upload images was also another win. Some time throughout the cour
 
 ### Git Workflow
 This was the first project where I could practice the git workflow. I was able to see its importance and necessity when working with a team. It was a great opportunity to practice something that I would most likely use often. It offered great real life experience.
+
+### Deployment
+Although the deployment of our app turned out to be quite challenging, I learned a lot through the process. Working together to get the image upload functionality working on the deployed app enabled me to learn a lot about how to store images on a cloud. 
 
 ## Key Learnings
 
@@ -183,10 +189,13 @@ Prior to working on this project, I had some issues pinpointing where exactly th
 ### Teamwork
 Although we had a few challenges come our way because of teamwork issues, I was still able to learn a lot about working in a team. I especially learned a lot through the numerous zoom meetings we held outside of class and the discussions we had.
 
+### Image Storing
+While deploying our app, I was able to learn a lot about how to store images on a cloud. Working with images always seemed daunting and intimidating to me, however, with this project, I feel a lot more comfortable working with images. 
+
 ## Bugs
 
-### Delete Functionality
-At the moment, the functionality to delete a blog is not working. Clicking the delete button does not do anything.
+### Delete Image Functionality
+At the moment, it is possible to delete blogs. However, the images will not be deleted on Cloudinary. 
 
 ### Comment Functionality
 It is currently not possible to post comments on a blog. Although there is an input for comments, it is not working. 
@@ -198,5 +207,9 @@ Due to the lack of time, we were not able to implement a lot of styling to our a
 
 ### Component Reusability
 The CreateBlogPage and EditBlogPage look very similar. They have the same inputs and styling. At the moment, my code is a bit repetitive, so to make it DRY I would have to create custom inputs to use both in the create and edit page.
+
+### Delete Images
+When we deployed our app, we noticed that the delete blog functionality was not deleting the image on Cloudinary. To fix this issue, a change would be necessary in the blog model, more specifically on the image field.
+
 
 
