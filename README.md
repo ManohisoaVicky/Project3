@@ -8,9 +8,16 @@ Blen is a full stack blogging app created for users who love writing, reading an
 <img src="./client/src/assets/blen.png" width="900">
 
 ## Deployment Link
+You can follow this link to try the app:
+[Blen](https://bit.ly/3w75ZIL)
 
 ## Timeframe and Working Team
-This project, which was done as a group (4 people), had a timeframe of 10 days. 
+This project, which was done as a group (4 people), had a timeframe of 10 days. However, we decided to keep working on it after the project had ended. For 4 days, we worked on some of the issues we could not fix during the given  timeframe. Those issues were:
+- filter functionality on homepage
+- delete functionality on detail page
+- detail, signup, login page css 
+- deployment
+- image upload to Cloudinary
 
 ## Technologies Used
 The technologies used for this project were:
